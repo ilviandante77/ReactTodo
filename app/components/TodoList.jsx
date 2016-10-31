@@ -2,14 +2,15 @@ var React = require ('react');
 var Todo = require ('Todo');
 
 var TodoList = React.createClass ({
-  render: function (){
+  render: function () {
     var {todos} = this.props;
-    var renderTodos = ((todos) => {
-      return todos.map( (todo)=>{
-        return
-        <Todo key={todo.id}/>
+    var renderTodos = () => {
+      return todos.map((todo) => {
+        return (
+          <Todo key={todo.id} {...todo}/>
+        );
       });
-    });
+    };
     return (
       <div>
         {renderTodos()}
@@ -18,4 +19,4 @@ var TodoList = React.createClass ({
   }
 });
 
-module.export = TodoList;
+module.exports = TodoList;

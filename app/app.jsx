@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Todo = require('Todo');
+var TodoApp = require('TodoApp');
 
 // Load foundation
 $(document).foundation();
@@ -10,6 +10,6 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-  <Todo/>,
+  <TodoApp/>,
   document.getElementById('app')
 );
